@@ -22,9 +22,8 @@ namespace PracticaGit2022_23DAM_OFCB
             //? ---------------   PRACTICA GIT 3.1   ------------------
             //? Daniela Amoasii Marin y Olga F. Civieta Bermejo 2022-23
             string textoTelegrama;
-            char tipoTelegrama = ' ';
             int numPalabras = 0;
-            double coste;
+            double coste = 0;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
@@ -45,14 +44,16 @@ namespace PracticaGit2022_23DAM_OFCB
             if (textoTelegrama[longCadena] != '.' || textoTelegrama[longCadena] != ' ')
                 numPalabras++;
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+  
+            if (rbO.Checked)
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
                     coste = 2.5 + (0.5 * (numPalabras - 10));
             else
             //Si el telegrama es urgente
-            if (tipoTelegrama == 'u')
+            if (rbU.Checked)
+            {
                 if (numPalabras <= 10)
                     coste = 5;
                 else

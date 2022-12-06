@@ -31,17 +31,20 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtTelegrama = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbUrgente = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.rbO = new System.Windows.Forms.RadioButton();
+            this.rbU = new System.Windows.Forms.RadioButton();
+            this.rbOr = new System.Windows.Forms.RadioButton();
+            this.rbUr = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(128, 368);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(175, 22);
             this.txtPrecio.TabIndex = 11;
@@ -49,7 +52,7 @@
             // txtTelegrama
             // 
             this.txtTelegrama.Location = new System.Drawing.Point(55, 135);
-            this.txtTelegrama.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTelegrama.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelegrama.Multiline = true;
             this.txtTelegrama.Name = "txtTelegrama";
             this.txtTelegrama.Size = new System.Drawing.Size(627, 138);
@@ -58,25 +61,13 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(476, 335);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 57);
             this.button1.TabIndex = 9;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbUrgente
-            // 
-            this.cbUrgente.AutoSize = true;
-            this.cbUrgente.Location = new System.Drawing.Point(55, 309);
-            this.cbUrgente.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.cbUrgente.Name = "cbUrgente";
-            this.cbUrgente.Size = new System.Drawing.Size(84, 20);
-            this.cbUrgente.TabIndex = 8;
-            this.cbUrgente.Text = "Urgente?";
-            this.cbUrgente.UseVisualStyleBackColor = true;
-            this.cbUrgente.CheckedChanged += new System.EventHandler(this.cbUrgente_CheckedChanged);
             // 
             // label2
             // 
@@ -124,20 +115,65 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "PRÁCTICA GIT 3.1";
             // 
+            // rbO
+            // 
+            this.rbO.AutoSize = true;
+            this.rbO.Location = new System.Drawing.Point(41, 246);
+            this.rbO.Name = "rbO";
+            this.rbO.Size = new System.Drawing.Size(67, 17);
+            this.rbO.TabIndex = 14;
+            this.rbO.TabStop = true;
+            this.rbO.Text = "Ordinario";
+            this.rbO.UseVisualStyleBackColor = true;
+            // 
+            // rbU
+            // 
+            this.rbU.AutoSize = true;
+            this.rbU.Location = new System.Drawing.Point(141, 246);
+            this.rbU.Name = "rbU";
+            this.rbU.Size = new System.Drawing.Size(63, 17);
+            this.rbU.TabIndex = 15;
+            this.rbU.TabStop = true;
+            this.rbU.Text = "Urgente";
+            this.rbU.UseVisualStyleBackColor = true;
+            // 
+            // rbOr
+            // 
+            this.rbOr.AutoSize = true;
+            this.rbOr.Location = new System.Drawing.Point(55, 302);
+            this.rbOr.Name = "rbOr";
+            this.rbOr.Size = new System.Drawing.Size(83, 20);
+            this.rbOr.TabIndex = 14;
+            this.rbOr.TabStop = true;
+            this.rbOr.Text = "Ordinario";
+            this.rbOr.UseVisualStyleBackColor = true;
+            // 
+            // rbUr
+            // 
+            this.rbUr.AutoSize = true;
+            this.rbUr.Location = new System.Drawing.Point(171, 302);
+            this.rbUr.Name = "rbUr";
+            this.rbUr.Size = new System.Drawing.Size(76, 20);
+            this.rbUr.TabIndex = 15;
+            this.rbUr.TabStop = true;
+            this.rbUr.Text = "Urgente";
+            this.rbUr.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 450);
+            this.ClientSize = new System.Drawing.Size(795, 421);
+            this.Controls.Add(this.rbUr);
+            this.Controls.Add(this.rbOr);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtTelegrama);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbUrgente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Práctica GIT 3.1";
             this.ResumeLayout(false);
@@ -150,11 +186,14 @@
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbUrgente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rbO;
+        private System.Windows.Forms.RadioButton rbU;
+        private System.Windows.Forms.RadioButton rbOr;
+        private System.Windows.Forms.RadioButton rbUr;
     }
 }
 
