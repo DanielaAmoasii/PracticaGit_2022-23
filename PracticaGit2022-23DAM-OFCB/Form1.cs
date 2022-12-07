@@ -26,11 +26,7 @@ namespace PracticaGit2022_23DAM_OFCB
             double coste = 0;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente?
-            if (cbUrgente.Checked)
-                tipoTelegrama = 'u';
-            else
-                tipoTelegrama = 'o';
+
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = 0;
             for (int i = 0; i < textoTelegrama.Length; i++)
@@ -44,28 +40,25 @@ namespace PracticaGit2022_23DAM_OFCB
             if (textoTelegrama[longCadena] != '.' || textoTelegrama[longCadena] != ' ')
                 numPalabras++;
             //Si el telegrama es ordinario
-  
-            if (rbO.Checked)
+
+            if (rbOr.Checked)
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
                     coste = 2.5 + (0.5 * (numPalabras - 10));
             else
             //Si el telegrama es urgente
-            if (rbU.Checked)
+            if (rbUr.Checked)
             {
                 if (numPalabras <= 10)
                     coste = 5;
                 else
                     coste = 5 + (0.75 * (numPalabras - 10));
+            }
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
         }
 
-        private void cbUrgente_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
